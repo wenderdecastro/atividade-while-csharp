@@ -1,7 +1,7 @@
 ﻿string nome = "";
 int idade = 0;
 float salario = 0f;
-char estadoCivil = "";
+char estadoCivil = '';
 
 
 
