@@ -1,7 +1,7 @@
 ﻿string nome = "";
 int idade = 0;
 float salario = 0f;
-char estadoCivil = '';
+char estadoCivil = ' ';
 
 
 
@@ -31,8 +31,10 @@ salario = float.Parse(Console.ReadLine());
 
 do{
 
-Console.WriteLine($"Insira seu estado civil: ");
+Console.WriteLine($"Insira seu estado civil: ('s' para solteiro(a), 'c' para casado(a), 'v' para viuvo(a) e 'd' para divorciado(a))");
 
-estadoCivil = char.Parse(Console.ReadLine());
+estadoCivil = char.Parse(Console.ReadLine().ToLower());
 
-} while(estadoCivil != 's' || estadoCivil != 'c' || estadoCivil != 'v' || estadoCivil != 'd');
+} while(estadoCivil != 's' && estadoCivil != 'c' && estadoCivil != 'v' && estadoCivil != 'd' );
+
+Console.WriteLine($"Informações validadas!");
